@@ -1,0 +1,199 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+    font-family: 'Winky Sans';
+    src: url('fonts/WinkySans.ttf') format('truetype'); /* Change path if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.intro-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #4caf50;
+  color: #fff;
+}
+
+.enter-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: #fff;
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: -250px; /* Initially hidden */
+  top: 0;
+  background: #333;
+  color: white;
+  padding-top: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar ul li:hover {
+  background: #4caf50;
+}
+
+/* Menu Icon */
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Content Styling */
+#content_home {
+  width: 100%;
+  height: 600px;
+  margin-left: 10px;
+  padding: 20px;
+  display: flex;
+  /* justify-content: center; */
+}
+
+#hi {
+  margin-left: 217px;
+  font-style: italic;
+  font-size: 30px;
+  color: #4caf50;
+}
+#fakehead {
+  width: 10%;
+  height: 45px;
+}
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+header {
+  width: 50%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  margin-left: 50%;
+  position: fixed;
+}
+.head {
+  background-color: #50d61c;
+  margin-right: 30px;
+  padding: 10px;
+  border-radius: 7px;
+}
+#text {
+  width: 50%;
+  height: 580px;
+}
+#immg {
+  height: 520px;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #e1d8d8;
+}
+#image_home {
+  border-radius: 40px;
+  height: 520px;
+}
+#page2 {
+  height: 600px;
+  width: 1330px;
+  /* background-color: #e06e6e; */
+}
+#pro_icon {
+  margin-left: 235px;
+}
+.sidebar h2 {
+  margin-left: 80px;
+}
+#tp {
+  height: 355px;
+  width: 600px;
+  background-color: #e1d8d8;
+  padding: 5px;
+  border-radius: 50px;
+}
+#tp_heading {
+  margin-top: 30px;
+  margin-left: 200px;
+}
+.box {
+  height: 160px;
+  width: 200px;
+  background-color: #a29f9f;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 30px;
+}
+#feature {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+#workout_time_spent {
+    font-family: 'Winky Sans', sans-serif;
+    font-size: 90px;
+    font-style: italic;
+    margin-left: 48px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+#cal {
+  margin-left: 61px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+#cal_num {
+  font-size: 90px;
+  font-style: italic;
+  margin-left: 22px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+#workout_time_tital {
+  margin-left: 48px;
+  font-size: 18px;
+  margin-top: 5px;
+}
