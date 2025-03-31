@@ -197,3 +197,181 @@ header {
   font-size: 18px;
   margin-top: 5px;
 }
+#streak_content{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+#streak_content h2{
+  font-size: 30px;
+}
+#main_box{
+  width: 1480px;
+  height: 535px;
+  /* background-color: #774141; */
+  display: flex;
+  align-items: center;
+
+}
+.sbox{
+  height: 450px;
+  width: 450px;
+  /* background-color: #55d42b; */
+  border-radius: 50px;
+  margin-left: 180px;
+  margin-right: 2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+#box2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#streak_img{
+  margin-top: 2px;
+  margin-left: 92px;
+  width:  270px;
+  height: 220px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-container {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%; /* Dynamically updated */
+    transition: width 0.5s ease-in-out;
+}
+
+/* Reward Image */
+.reward {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+#com_p{
+  display: flex;
+  justify-content: center;
+}
+#str_img{
+  border-radius: 50px;
+}
+#streak_text{
+  background-color: #fff;
+  margin-left: 77px;
+  width: 300px;
+  height: 135px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 20px;
+}
+.ti{
+  margin-left: 56px;
+}
+
+
+/* Streak Icon */
+.streak-icon {
+    background: orange;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 120px;
+}
+
+.streak-icon::before,
+.streak-icon::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+}
+
+.streak-icon::before {
+    top: -5px;
+    left: 10px;
+}
+
+.streak-icon::after {
+    top: -5px;
+    right: 10px;
+}
+
+/* Streak Days */
+.streak-days {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: lightgray;
+    font-weight: bold;
+    color: white;
+}
+
+.completed {
+    background: orange;
+}
+
+/* Streak Text */
+h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    margin-left: 100px;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    margin-left: 20px;
+}
+
+/* Continue Button */
+.continue-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+.continue-btn:hover {
+    background: #0056b3;
+}

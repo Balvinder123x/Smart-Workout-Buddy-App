@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -27,11 +27,116 @@
     </ul>
   </div>
 
-  <div class="content">
-    <h2>Streaks</h2>
-    <p>Track your workout and healthy habit streaks here. See your progress over time!</p>
+  <div id="streak_content" class="content">
+    <h2>Your Streaks</h2>
+    <div id="main_box">
+      <div id="box1" class="sbox">
+        <div id="streak_img"></div>
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 70%;"></div>
+          <img src="data/medal.png" height="20px" width="20px" alt="">
+        </div>  
+        <div id="streak_text"></div>
+      </div>
+      <div id="box2" class="sbox">
+
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Platform - Streaks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head"><a href="home.html">Home</a></div>
+      <div class="head">About Us</div>
+      <div class="head">Blog</div>
+      <div class="head">Contact Us</div>
+    </header>
+
+    <div id="fakehead">
+      <div id="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="streaks.html">Streaks</a></li>
+        <li><a href="reminders.html">Reminders</a></li>
+        <li><a href="chatbot.html">Chat with AI</a></li>
+      </ul>
+    </div>
+
+    <!-- Streaks Section -->
+    <div id="streak_content" class="content">
+      <h2>Your Streaks</h2>
+
+      <div id="main_box">
+        <!-- Streak Box 1 -->
+        <div id="box1" class="sbox">
+          <div id="streak_img">
+            <img
+              id="str_img"
+              src="data/Smart workout.png"
+              width="200px"
+              height="180px"
+              alt=""
+            />
+          </div>
+          <div id="com_p">
+            <div class="progress-container">
+              <div class="progress-bar" id="progressBar1"></div>
+            </div>
+            <img
+              src="data/medal.png"
+              id="rewardImage"
+              class="reward"
+              alt="Reward"
+            />
+          </div>
+          <div id="streak_text">
+            <h3 class="ti">Workout Complete!</h3>
+            <p class="tii">Complete the today workout goal</p>
+            <p class="tiii">to unlock new reward</p>
+          </div>
+        </div>
+
+        <!-- Streak Box 2 -->
+        <div id="box2" class="sbox">
+          <div class="streak-tracker">
+            <div class="streak-icon">
+              <span>7</span>
+            </div>
+            <div class="streak-days">
+              <span class="day completed">S</span>
+              <span class="day completed">S</span>
+              <span class="day completed">M</span>
+              <span class="day completed">T</span>
+              <span class="day completed">W</span>
+              <span class="day completed">T</span>
+              <span class="day completed">F</span>
+            </div>
+            <h3>7 Day Streak!</h3>
+            <p>Complete a lesson every day to build your streak</p>
+            <button class="continue-btn">CONTINUE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
