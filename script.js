@@ -46,3 +46,101 @@ function updateProgress() {
 window.onload = function () {
   document.getElementById("progressBar1").style.width = "70%";
 };
+
+
+async function sendMessage() {
+  let userInput = document.getElementById("user-input").value;
+  if (!userInput) return;
+
+  // Display user message
+  let chatBox = document.getElementById("chat-box");
+  chatBox.innerHTML += `<div>User: ${userInput}</div>`;
+
+  document.getElementById("user-input").value = ""; // Clear input field
+
+  // Fetch AI response
+  let response = await fetchAIResponse(userInput);
+
+  // Display AI response
+  chatBox.innerHTML += `<div>AI: ${response}</div>`;
+}
+
+async function fetchAIResponse(message) {
+  let apiKey = "YOUR_OPENAI_API_KEY"; // Replace with your OpenAI API key
+
+  let response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message }],
+    }),
+  });
+
+  let data = await response.json();
+  return data.choices[0].message.content;
+}
+
+document.addEventListener("DOMContentLoaded", loadReminders);
+
+function addReminder() {
+  let input = document.getElementById("reminderInput");
+  let reminderText = input.value.trim();
+
+  if (reminderText === "") return; // Prevent empty input
+
+  let reminder = { text: reminderText, completed: false };
+  let reminders = getStoredReminders();
+  reminders.push(reminder);
+
+  saveReminders(reminders);
+  input.value = ""; // Clear input field
+  renderReminders();
+}
+
+function renderReminders() {
+  let todayGoals = document.getElementById("todayGoals");
+  let completedGoals = document.getElementById("completedGoals");
+
+  todayGoals.innerHTML = "";
+  completedGoals.innerHTML = "";
+
+  let reminders = getStoredReminders();
+
+  reminders.forEach((reminder, index) => {
+    let li = document.createElement("li");
+    li.innerHTML = `<input type="checkbox" ${
+      reminder.completed ? "checked" : ""
+    } onclick="toggleReminder(${index})">
+                        ${reminder.text}`;
+
+    if (reminder.completed) {
+      completedGoals.appendChild(li);
+    } else {
+      todayGoals.appendChild(li);
+    }
+  });
+}
+
+function toggleReminder(index) {
+  let reminders = getStoredReminders();
+  reminders[index].completed = !reminders[index].completed;
+
+  saveReminders(reminders);
+  renderReminders();
+}
+
+function getStoredReminders() {
+  return JSON.parse(localStorage.getItem("reminders")) || [];
+}
+
+function saveReminders(reminders) {
+  localStorage.setItem("reminders", JSON.stringify(reminders));
+}
+
+function loadReminders() {
+  renderReminders();
+}
